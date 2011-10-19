@@ -33,6 +33,7 @@
 	NSURL* imageURL;
 	UIImage* placeholderImage;
 	id<EGOImageButtonDelegate> delegate;
+    NSString *userdata;
 }
 
 - (id)initWithPlaceholderImage:(UIImage*)anImage; // delegate:nil
@@ -43,6 +44,7 @@
 @property(nonatomic,retain) NSURL* imageURL;
 @property(nonatomic,retain) UIImage* placeholderImage;
 @property(nonatomic,retain) id<EGOImageButtonDelegate> delegate;
+@property(nonatomic,retain) NSString *userdata;
 @end
 
 @protocol EGOImageButtonDelegate<NSObject>

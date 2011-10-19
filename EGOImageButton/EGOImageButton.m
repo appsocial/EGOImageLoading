@@ -28,7 +28,7 @@
 
 
 @implementation EGOImageButton
-@synthesize imageURL, placeholderImage, delegate;
+@synthesize imageURL, placeholderImage, delegate, userdata;
 
 - (id)initWithPlaceholderImage:(UIImage*)anImage {
 	return [self initWithPlaceholderImage:anImage delegate:nil];	
@@ -39,6 +39,7 @@
 		self.placeholderImage = anImage;
 		self.delegate = aDelegate;
 		[self setImage:self.placeholderImage forState:UIControlStateNormal];
+        self.userdata = @"";
 	}
 	
 	return self;
@@ -102,6 +103,7 @@
 	
 	self.imageURL = nil;
 	self.placeholderImage = nil;
+    self.userdata = nil;
     [super dealloc];
 }
 
